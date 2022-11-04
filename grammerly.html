@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/gramm.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Grammar Correction & Text To Speech</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Grammar Correction & Text To Speech</h2>
+      <p >
+        Check your English text for grammar, spelling, and punctuation errors
+        with real time char counter.
+      </p>
+
+      <textarea
+        id="textarea"
+        class="textarea"
+        placeholder="Type Here.........."
+        maxlength="150"
+      spellcheck="true"
+      
+      autocomplete="on"></textarea>
+      
+
+      <button onclick="copyText()">Copy Text</button> <br><br><br> <br> <br>
+      
+      <button id="button1">Convert To Speech</button>
+      
+       
+      
+      <div class="counter-container">
+        
+        <p>Total character: <span id="total-conter"> 0</span></p>
+        <select class="outer"></select>
+        <p>
+          Remaining:
+          <span class="remaining-counter" id="remaining-counter">150</span>
+          
+        </p>
+        
+      </div>
+   
+    </div>
+    
+    <script src="./static/scrpits/gram.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

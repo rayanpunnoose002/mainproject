@@ -1,6 +1,6 @@
 const textarea = document.querySelector("textarea"),
 voiceList = document.querySelector("select"),
-speechBtn = document.querySelector("button");
+speechBtn = document.getElementById("button1")
 
 let synth = speechSynthesis,
 isSpeaking = true;
