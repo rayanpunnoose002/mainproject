@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./static/css/gramm.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Text To Code</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Text To Code</h2>
+    <p>
+      Generate program code for any language by typing it.....
+    </p>
+
+    <textarea style="width: 100%; height: 100px; " id="program-name-box" class="textarea" placeholder="Type Here.........."
+      maxlength="150" spellcheck="true" autocomplete="on"></textarea>
+
+    <textarea style="width: 100%; height: 500px;" id="result" class="textarea" placeholder="result" maxlength="150" ></textarea>
+    <button onclick="myFunction()">Copy Text</button> <br><br><br> <br> <br>
+
+    <button id="button1" onclick="newFunc()">Get The Program</button>
+
+
+
+
+
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</body>
+
+<script src="./openai.js"></script>
+
+
+<script>
+  function myFunction() {
+// Get the text field
+var copyText = document.getElementById("result");
+
+// Select the text field
+copyText.select();
+copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+navigator.clipboard.writeText(copyText.value);
+
+// Alert the copied text
+alert("Copied the text `: " + copyText.value);
+}
+</script>
+</html>

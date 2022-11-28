@@ -1,4 +1,4 @@
-const textarea = document.querySelector("textarea"),
+const textarea = document.getElementById("result"),
 voiceList = document.querySelector("select"),
 speechBtn = document.getElementById("button1")
 
