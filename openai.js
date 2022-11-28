@@ -15,7 +15,7 @@ const newFunc = () => {
     axios({
   method: 'post',
   headers:{
-    Authorization: 'Bearer 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'
+    Authorization: 'Bearer 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'
   },
   url: 'https://api.openai.com/v1/completions',
   data: settings
